@@ -25,6 +25,29 @@ Pour résumer la méthode Mérise donne des étapes à l'analyse des données en
 
 Prenons un cahier des charges : une biliothèque de disque.
 
+Remarque : une entité aura pour forme un tableau d'attribut(s) et de de valeur(s) tuples.
+
+```text
+Clients
+-----------------
+id  nom     adresse        <-- Attributs
+1   Alan     Paris         <-- tuple de valeurs (1, Alan, Paris)
+2   Alice    Marseille
+3   Sophie   Lyon
+```
+
+Un attribut peut parfois avoir une valeur particulière NULL. Dans ce cas, et uniquement dans ce cas, l'attribut en question peut ne pas contenir d'information, il sera alors préciser lors de la conception. La valeur NULL indique l'**absence d'information**.
+
+```text
+Clients
+-----------------
+id  nom     adresse        <-- Attributs
+1   Alan     Paris         <-- tuple de valeurs (1, Alan, Paris)
+2   Alice    Marseille
+3   Sophie   Lyon
+4   Michel   NULL          <-- absence de l'information
+```
+
 ### Exercice définir les Entités
 
 1. Essayez d'imaginer 5 "Entités" pour une bibliothèque de disques vinyles en les écrivants sur une feuille de papier. 
@@ -45,7 +68,6 @@ Utilisez les Entités que nous avons trouvé au 1.
 *Un Disque est rangé sur une Etagère (1, 1). Et une Etagère contient 0 à n Disque(s)*
 
 ![relation](images/relation_02.jpg)
-
 
 ## Exercice 2 shop
 
@@ -87,11 +109,15 @@ Trouvez toutes les relations 1:N, N:N et 1:1 dans notre projet si elles existent
 
 Définition :  elle est créée dans la relation/association correspondante à l'Entité côté 1 (max). Elle permet de mettre en relation deux Entités sans ambiguité. Elle possède le même type que la clé primaire qu'elle référence. Et n'est pas unique comme une clé primaire. C'est également au sens base de données un index.
 
-Une Entité peut avoir plusieurs clés étrangères.
+Une Entité peut avoir plusieurs clés étrangères. Mais une entité ne possèdera qu'une seule clé primaire.
 
-### Exercice Clé étrangère
+## Schéma pour expliciter la relation 
 
-Déterminez toutes les clés étrangères dans les relations 1:N dans notre projet. Voyez l'exemple suivant :
+Une clé étrangère référencera une clé primaire. La flèche part de l'entité possèdant la clé étrangère vers la clé primaire.
+
+![fk_pk](images/pk_fk.jpg)
+
+### Exemples
 
 ```text
                N:1
@@ -107,6 +133,27 @@ Commandes
 - date
 - #id_client number  <-- création de la clé étrangère
 ```
+
+Par exemple un client Alan a fait 4 commandes que l'on notera dans l'entité Commandes comme suit :
+
+```text
+Clients
+-----------------
+id  nom     adresse
+1   Alan    Paris
+
+Commandes
+-----------------
+code  date        #id_client number
+1151  12/01/21    1
+1152  13/01/21    1
+1167  01/02/21    1
+6517  21/02/21    1
+```
+
+### Exercice Clé étrangère
+
+Déterminez toutes les clés étrangères dans les relations 1:N dans notre projet. Voyez l'exemple suivant :
 
 ## Association de type N:N
 
@@ -131,3 +178,5 @@ Articles
 ### Exercice Projet relation
 
 Reprendre le projet de la biliothèque de disques et trouvez toutes les Entités dans les relation N:N.
+
+
