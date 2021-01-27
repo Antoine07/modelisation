@@ -35,8 +35,8 @@ Artistes
 Disques  Créer  Artistes
 *Un disque est créé par 1 Artiste.*
 
-Disques(1,1) Ranger (0,n)Etagères
+Disques Ranger Etagères
 *Un disque est rangé sur 1 Etagère.*
 
-Disques(1,1) Empreinter (0, n)Membres
+Disques Empreinter Membres
 *Un disque est empreinté par 1 Membre.*
