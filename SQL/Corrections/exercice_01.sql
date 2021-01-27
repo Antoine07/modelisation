@@ -61,3 +61,10 @@ Faites une requête permettant de sélectionner le pilote ayant eu le meilleur b
 SELECT name
 FROM pilots
 WHERE bonus = (SELECT max(bonus) FROM pilots);
+
+/*
+
+Combien de pilotes sont en dessous de la moyenne d'heure de vols ?
+*/
+
+SELECT COUNT(*) FROM pilots WHERE numFlying < ( SELECT AVG(numFlying) FROM pilots );
