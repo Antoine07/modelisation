@@ -127,3 +127,7 @@ Client
 Articles
 - nom
 ```
+
+### Exercice Projet relation
+
+Reprendre le projet de la biliothèque de disques et trouvez toutes les Entités dans les relation N:N.
