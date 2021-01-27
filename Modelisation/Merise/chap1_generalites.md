@@ -73,7 +73,7 @@ Utilisez les Entités que nous avons trouvé au 1.
 
 ## Exercice 2 shop
 
-On crée l'Entité Magasin. On se demande si un disque que l'on prête à la bibliothèque se trouve dans un magasin. Essayez de traiter cet information dans notre MCD. Faites un dessin.
+On crée l'Entité Magasin. On se demande si un disque que l'on prête à la bibliothèque se trouve dans un magasin. Essayez de traiter cette information dans notre MCD. Complétez le dessin que vous avez déjà fait.
 
 ## Exercice définir les types
 
