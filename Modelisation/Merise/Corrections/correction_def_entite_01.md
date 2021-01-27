@@ -32,11 +32,16 @@ Artistes
 
 3. Définissez maintenant simplement les relations entre les Entités à l'aide d'un verbe.
 
-Disques  Créer  Artistes
-*Un disque est créé par 1 Artiste.*
+       (min, max)
+Disques(1, n)  Créer  (0,n)Artistes
+*1 Disque est créé par 1 ou plusieurs Artiste(s).*
+*1 Artiste a créé 0 à n Disque(s).*
 
-Disques Ranger Etagères
-*Un disque est rangé sur 1 Etagère.*
+Disques(1,1) Ranger (0,n)Etagères
+*1 disque est rangé sur 1 Etagère.*
+*1 Etagere contient de 0 à n Disque(s).*
 
-Disques Empreinter Membres
-*Un disque est empreinté par 1 Membre.*
+Disques(0,1) Empreinter (0, n)Membres
+*1 disque est empreinté par 0 à 1 Membre.*
+*1 Membre a empreinté de 0 à n Disque(s).*
+
