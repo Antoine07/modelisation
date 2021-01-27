@@ -90,13 +90,13 @@ start : offset,  length le nombre d'éléments du tableau.
 
 ## Exercices select 01
 
-- Sélectionnez tous les pilotes de la compagnie AUS
+- Sélectionnez tous les noms des pilotes de la compagnie AUS.
 
 - Sélectionnez les noms des pilotes de la compagnie FRE1 ayant fait plus de 15 heures de vols.
 
-- Sélectionnez les noms des pilotes de la compagnie FRE1 ayant fait plus de 20 heures de vols.
+- Sélectionnez les noms des pilotes de la compagnie FRE1 ayant fait plus de 20 heures de vols strictement.
 
-- Sélectionnez les noms des pilotes de la compagnie FRE1 ou AUST ayant fait plus de 20 de vols.
+- Sélectionnez les noms des pilotes de la compagnie FRE1 ou AUST ayant fait plus de 20 de vols strictement.
 
 - Sélectionnez les noms des pilotes ayant fait entre 190 et 200 heures de vols.
 
