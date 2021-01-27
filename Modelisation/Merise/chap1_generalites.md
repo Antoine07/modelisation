@@ -103,6 +103,12 @@ Définition : c'est une association (relation) qui a les cardinalités maximales
 
 Définition : c'est une association (relation) qui a les cardinalités maximales positionnées à 1 d'un côté de l'association et à 1 de l'autre. On rappelle que les relations sont définies naturellement comme suit : (min, max).
 
+```text
+Disques(0,1)   représenté   (1,1)Images 1:1
+```
+De 0 à 1 disque est représenté par 1 image.
+Et 1 image peut être représentée par 1 disque.
+
 ### Exercice associations
 
 Trouvez toutes les relations 1:N, N:N et 1:1 dans notre projet si elles existent.
