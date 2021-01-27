@@ -77,11 +77,11 @@ On crée l'Entité Magasin. On se demande si un disque que l'on prête à la bib
 
 ## Exercice définir les types
 
-Reprenez l'exercice précédent et définissez les types de chaque attributs.
+Reprenez l'exercice précédent et définissez les types (number, string, Date, ...) de chaque attributs.
 
 ## Exercice clé primaire
 
-Une clé primaire permet d'identifier dans nos Entités de manière unique un tuple ou une ligne de l'Entité. La clé primaire peut être définie par un ou plusieurs attribut(s). Par exemple nom, adresse ou le nom et email dans l'Entité Employers :
+Une clé primaire permet d'identifier dans nos Entités **de manière unique** un tuple ou une ligne de l'Entité. La clé primaire peut être définie par un ou plusieurs attribut(s). Par exemple nom, adresse ou le nom et email dans l'Entité Employers :
 
 ![primary](images/primary_01.jpg)
 
@@ -107,11 +107,14 @@ Définition : c'est une association (relation) qui a les cardinalités maximales
 
 Trouvez toutes les relations 1:N, N:N et 1:1 dans notre projet si elles existent.
 
-## Clé étrangère
+## Clé étrangère 1:N
 
-Définition :  elle est créée dans la relation/association correspondante à l'Entité côté 1 (max). Elle permet de mettre en relation deux Entités sans ambiguité. Elle possède le même type que la clé primaire qu'elle référence. Et n'est pas unique comme une clé primaire. C'est également au sens base de données un index.
+Définition : Pour une relation 1:N, elle est créée dans l'association correspondante à l'Entité (x, 1), max est égal à 1. 
+- Elle permet de mettre en relation deux Entités sans ambiguité. 
+- Elle possède le même type que la clé primaire qu'elle référence. 
+- Il n'y a pas de contrainte d'unicité (valeur unique) sur la clé étrangère.
 
-Une Entité peut avoir plusieurs clés étrangères. Mais une entité ne possèdera qu'une seule clé primaire.
+Une Entité peut avoir plusieurs clés étrangères. Mais une Entité possède qu'une unique clé primaire.
 
 ## Schéma pour expliciter la relation 
 
@@ -159,8 +162,7 @@ Déterminez toutes les clés étrangères dans les relations 1:N dans notre proj
 
 ## Association de type N:N
 
-**Définition** : Une association de type N:N (cardinalité maximale des deux côtés) se traduit par la
-création d'une Entité composée des clés étrangères référençant les relations correspondantes aux Entités liées par l'association.
+**Définition** : Une association de type N:N (cardinalité maximale des deux côtés) se traduit par la création d'une Entité composée des clés étrangères référençant les relations correspondantes aux Entités liées par l'association.
 
 Une Entité de ce type peut être porteuse d'information. Voir l'exercice suivant.
 
@@ -180,5 +182,3 @@ Articles
 ### Exercice Projet relation
 
 Reprendre le projet de la biliothèque de disques et trouvez toutes les Entités dans les relation N:N.
-
-
