@@ -1,6 +1,6 @@
 # Modelisation
 
-Ne confondez pas la méthode Mérise et langage UML (Unified Modeling Language). La première s'attache à organiser l'information et la deuxième est plutôt utilisée dans les relations entre les classes métiers dans le développement d'une application. Par exemple dans le développement d'un système de réservation de billets d'avion en PHP, on modélisera en UML les relations entre les différentes classes métiers.
+Ne confondez pas la méthode Mérise et langage UML (Unified Modeling Language). La première s'attache à organiser l'information et la deuxième est plutôt utilisée dans les relations entre les classes métiers dans le développement d'une application. Par exemple dans le développement d'un système de réservation de billets d'avion en PHP, on modélisera par un diagramme de classes les relations entre les différentes classes métiers.
 
 ## Introduction à la méthode Mérise
 
