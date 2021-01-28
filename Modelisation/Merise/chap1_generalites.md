@@ -1,6 +1,6 @@
 # Modelisation
 
-Ne confondez pas la méthode Mérise et langage UML (Unified Modeling Language). La première s'attache à organiser l'information et la deuxième est plutôt utilisée dans les relations entre les classes métiers dans le développement d'une application, par exemple dans un développement PHP.
+Ne confondez pas la méthode Mérise et langage UML (Unified Modeling Language). La première s'attache à organiser l'information et la deuxième est plutôt utilisée dans les relations entre les classes métiers dans le développement d'une application. Par exemple dans le développement d'un système de réservation de billets d'avion en PHP, on modélisera en UML les relations entre les différentes classes métiers.
 
 ## Introduction à la méthode Mérise
 
@@ -25,7 +25,7 @@ Pour résumer la méthode Mérise donne des étapes à l'analyse des données en
 
 ## Application
 
-Prenons un cahier des charges : une biliothèque de disque.
+Prenons un cahier des charges : une biliothèque de disques vinyles.
 
 Remarque : une entité aura pour forme un tableau d'attribut(s) et de de valeur(s) tuples.
 
@@ -38,7 +38,7 @@ id  nom     adresse        <-- Attributs
 3   Sophie   Lyon
 ```
 
-Un attribut peut parfois avoir une valeur particulière NULL. Dans ce cas, et uniquement dans ce cas, l'attribut en question peut ne pas contenir d'information, il sera alors préciser lors de la conception. La valeur NULL indique l'**absence d'information**.
+Un attribut peut parfois avoir une valeur particulière : NULL. Dans ce cas, et uniquement dans ce cas, l'attribut en question peut ne pas contenir d'information, il sera alors préciser lors de la conception. La valeur NULL indique une **absence de l'information pour un tuple donné (valeurs)**.
 
 ```text
 Clients
@@ -47,7 +47,7 @@ id  nom     adresse        <-- Attributs
 1   Alan     Paris         <-- tuple de valeurs (1, Alan, Paris)
 2   Alice    Marseille
 3   Sophie   Lyon
-4   Michel   NULL          <-- absence de l'information
+4   Michel   NULL          <-- absence d'information
 ```
 
 ### Exercice définir les Entités
@@ -58,7 +58,7 @@ id  nom     adresse        <-- Attributs
 2. Décrivez maintenant les attributs de chaque Entité. Définissez au maximun 4 attributs.
 *Par exemple le nom, largeur et hauteur sont les attributs d'une Etagère.*
 
-Utilisez les Entités que nous avons trouvé au 1.
+Utilisez les Entités que nous avons trouvé à la question 1.
 
 3. Définissez maintenant simplement les relations entre les Entités à l'aide d'un verbe. Vous pouvez faire un dessin sans les attributs.
 *Pour se faire trouver un verbe qui relie deux Entités : un Disque est rangé sur une Etagère*
@@ -67,7 +67,7 @@ Utilisez les Entités que nous avons trouvé au 1.
 
 4. Définissez la cardinalité entre les relations. Regardez l'image ci-dessous vous codifiez les relations comme suit : (x,y).
 
-*Un Disque est rangé sur une Etagère (1, 1). Et une Etagère contient 0 à n Disque(s)*
+*Un Disque est rangé sur une Etagère. Et une Etagère peut rangé de 0 à n Disque(s)*
 
 ![relation](images/relation_02.jpg)
 
@@ -77,17 +77,17 @@ On crée l'Entité Magasin. On se demande si un disque que l'on prête à la bib
 
 ## Exercice définir les types
 
-Reprenez l'exercice précédent et définissez les types (number, string, Date, ...) de chaque attributs.
+Reprenez l'exercice précédent et définissez les types (number, string, Date, ...) de chaque attribut.
 
 ## Exercice clé primaire
 
-Une clé primaire permet d'identifier dans nos Entités **de manière unique** un tuple ou une ligne de l'Entité. La clé primaire peut être définie par un ou plusieurs attribut(s). Par exemple nom, adresse ou le nom et email dans l'Entité Employers :
+Une clé primaire permet d'identifier dans nos Entités, **de manière unique**, un tuple ou une ligne de l'Entité. La clé primaire peut être définie par un ou plusieurs attribut(s). Par exemple nom, adresse ou le nom, prénom (...) dans l'Entité Employers :
 
 ![primary](images/primary_01.jpg)
 
 Lorsque vous ne pouvez pas définir une clé à partir des attributs d'une Entité alors on ajoute un attribut id de type entier.
 
-Une clé primaire définit une valeur ou un tuple de valeur unique. Elle ne peut également être nulle. Nous verrons également que dans une base de données elle définit un index pour accélérer les recherche en base de données.
+Une clé primaire définit une valeur ou un tuple de valeur unique. Elle ne peut également être nulle. Nous verrons également que dans une base de données elle définit un index pour optimiser les recherche.
 
 Trouvez toutes les clés primaires des Entités.
 
@@ -104,7 +104,7 @@ Définition : c'est une association (relation) qui a les cardinalités maximales
 Définition : c'est une association (relation) qui a les cardinalités maximales positionnées à 1 d'un côté de l'association et à 1 de l'autre. On rappelle que les relations sont définies naturellement comme suit : (min, max).
 
 ```text
-Disques(0,1)   représenté   (1,1)Images 1:1
+Disques(0,1)   représenter   (1,1)Images 1:1
 ```
 De 0 à 1 disque est représenté par 1 image.
 Et 1 image peut être représentée par 1 disque.
