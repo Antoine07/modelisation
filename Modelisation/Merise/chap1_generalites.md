@@ -38,7 +38,7 @@ id  nom     adresse        <-- Attributs
 3   Sophie   Lyon
 ```
 
-Un attribut peut parfois avoir une valeur particulière : NULL. Dans ce cas, et uniquement dans ce cas, l'attribut en question peut ne pas contenir d'information, il sera alors préciser lors de la conception. La valeur NULL indique une **absence de l'information pour un tuple donné (valeurs)**.
+Un attribut peut parfois avoir une valeur particulière : NULL. Dans ce cas, et uniquement dans ce cas, l'attribut en question peut ne pas contenir d'information, il sera alors préciser lors de la conception. La valeur NULL indique une **absence de l'information pour un attribut/des attributs d'un tuple donné (valeurs)**.
 
 ```text
 Clients
